@@ -26,407 +26,419 @@
 </head>
 
 <body class="menubar-left menubar-unfold menubar-dark theme-purple">
-<!--============= start main area --> 
-<!-- APP NAVBAR ==========-->
-<nav id="app-navbar" class="navbar navbar-inverse navbar-fixed-top purple in"> 
-  
-  <!-- navbar header -->
-  <div class="navbar-header">
-    <button type="button" id="menubar-toggle-btn" class="navbar-toggle visible-xs-inline-block navbar-toggle-left hamburger hamburger--collapse js-hamburger"> <span class="sr-only">Toggle navigation</span> <span class="hamburger-box"><span class="hamburger-inner"></span></span> </button>
-    <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="zmdi zmdi-hc-lg zmdi-more"></span> </button>
-    <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="zmdi zmdi-hc-lg zmdi-search"></span> </button>
-    <a href="index.html" class="navbar-brand"> <img alt="" class="brand-icon" src="../assets/images/logo-gov_banner1.png" /> <img alt="" class="brand-name dashboard-banner-gov pull-right" src="../assets/images/logo-gov_banner2.png" /> </a> </div>
-  <!-- .navbar-header -->
-  
-  <div class="navbar-container container-fluid">
-    <div class="collapse navbar-collapse" id="app-navbar-collapse">
-      <ul class="nav navbar-toolbar navbar-toolbar-left navbar-left">
-        <li class="hidden-float hidden-menubar-top"> <a href="javascript:void(0)" role="button" id="menubar-fold-btn" class="hamburger hamburger--arrowalt is-active js-hamburger"> <span class="hamburger-box"><span class="hamburger-inner"></span></span> </a> </li>
-        <li> <a href="index.html"><img class="dashboard-banner-logo" alt="" src="../assets/images/logo-skillshub_sml_neg.png" /></a> </li>
-      </ul>
-      <ul class="nav navbar-toolbar navbar-toolbar-right navbar-right">
-        <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-hc-lg zmdi-account"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-account-box"></i>My Profile</a></li>
-            <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-sign-in"></i>Sign out</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <!-- navbar-container --> 
-</nav>
-<!--========== END app navbar --> 
-<!-- APP ASIDE ==========-->
-<aside id="menubar" class="menubar in dark">
-  <div class="menubar-scroll">
-    <div class="menubar-scroll-inner">
-      <ul class="app-menu">
-        <li> <a href="index.html"> <i class="menu-icon zmdi zmdi-view-dashboard zmdi-hc-lg"></i> <span class="menu-text">Dashboard</span> </a> </li>
-        <li> <a href="#"> <i class="menu-icon zmdi zmdi-accounts-alt zmdi-hc-lg"></i> <span class="menu-text">Clients</span> </a> </li>
-        <li> <a href="#"> <i class="menu-icon zmdi zmdi-assignment zmdi-hc-lg"></i> <span class="menu-text">Classes</span> </a> </li>
-        <li> <a href="#"> <i class="menu-icon zmdi zmdi-assignment-check zmdi-hc-lg"></i> <span class="menu-text">Attendance</span> </a> </li>
-        <li> <a href="#"> <i class="menu-icon zmdi zmdi-notifications zmdi-hc-lg"></i> <span class="menu-text">Notifications</span> </a> </li>
-        <li> <a href="#"> <i class="menu-icon zmdi zmdi-chart zmdi-hc-lg"></i> <span class="menu-text">Reports</span> </a> </li>
-        <li> <a href="#"> <i class="menu-icon zmdi zmdi-accounts-list-alt zmdi-hc-lg"></i> <span class="menu-text">Users</span> </a> </li>
-        <li class="menu-separator">
-          <hr>
-        </li>
-        <li> <a href="#"> <i class="menu-icon zmdi zmdi-archive zmdi-hc-lg"></i> <span class="menu-text">Audit</span> </a> </li>
-      </ul>
-      <!-- .app-menu --> 
-    </div>
-    <!-- .menubar-scroll-inner --> 
-  </div>
-  <!-- .menubar-scroll --> 
-</aside>
-<!--========== END app aside --> 
-<!-- navbar search -->
-<div id="navbar-search" class="navbar-search collapse">
-  <div class="navbar-search-inner">
-    <form action="#">
-      <span class="search-icon"><i class="fa fa-search"></i></span>
-      <input class="search-field" type="search" placeholder="search..." />
-    </form>
-    <button type="button" class="search-close" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false"> <i class="fa fa-close"></i> </button>
-  </div>
-  <div class="navbar-search-backdrop" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false"></div>
-</div>
-<!-- .navbar-search --> 
-<!-- APP MAIN ==========-->
-<main id="app-main" class="app-main">
-  <div class="wrap">
-    <section class="app-content">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="widget p-md clearfix">
-            <div class="pull-left">
-              <h3 class="widget-title">Welcome to Skills HUB</h3>
-              <!--<small class="text-color">Message to go here</small> --></div>
-          </div>
-          <!-- .widget --> 
-        </div>
-        <!--	      <div class="col-md-4 col-sm-4">
-	<div class="panel panel-primary">
-								<div class="panel-heading">
-									<h4 class="panel-title">Register client</h4>
-								</div>
-								<div class="panel-body">
-									<p>Text to go here</p>
-								</div>
-							</div>
-	</div>-->
-        <div class="col-md-6">
-          <div class="panel panel-purple">
-            <div class="panel-heading">
-              <h4 class="panel-title">Attendance</h4>
-            </div>
-            <div class="panel-body">
-              <div class="widget-body">
-                <form>
-                  <div class="row">
-                    <div class="form-group col-md-12">
-                      <select class="form-control att-class-full">
-                        <option>Site</option>
-                        <option>Crown Street</option>
-                        <option disabled>Station St (Level 1)</option>
-                        <option disabled>Elizabeth Towers</option>
-                      </select>
-                    </div>
-                    <div class="form-group col-md-12">
-                      <select class="form-control att-class-full">
-                        <option>Class</option>
-                        <option>Level 2 Morning ID:24552</option>
-                        <option disabled>ACSF Reading ID:24552</option>
-                        <option disabled>ACSF Reading ID:24553</option>
-                        <option disabled>ACSF Writing ID:24545</option>
-                        <option disabled>ACSF Writing ID:24524</option>
-                        <option disabled>ACSF Listening ID:24525</option>
-                        <option disabled>ACSF Listening ID:24526</option>
-                      </select>
-                    </div>
-                    <div class="form-group col-md-12">
-                      <div class="input-group date" id="datetimepicker2"  data-options="{ viewMode: 'years', format: 'DD/MM/YYYY' }" data-plugin="datetimepicker">
-                        <input class="form-control" type="text">
-                        <span class="input-group-addon bg-info text-white"> <span class="glyphicon glyphicon-calendar"></span> </span> </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div class="panel-footer">
-                <button type="button" class="btn btn-primary btnView"><i class="fa fa-search"></i> Find class</button>
-              </div>
-            </div>
-          </div>
-          <!-- .widget --> 
-        </div>
-        <div class="col-md-6">
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h4 class="panel-title">Print Rolls</h4>
-            </div>
-            <div class="panel-body">
-              <div class="widget-body">
-                <form>
-                  <div class="row">
-                    <div class="form-group col-md-12">
-                      <select class="form-control att-class-full">
-                        <option>Site</option>
-                        <option>Crown Street</option>
-                        <option disabled>Station St (Level 1)</option>
-                        <option disabled>Elizabeth Towers</option>
-                      </select>
-                    </div>
-                    <div class="form-group col-md-12">
-                      <select class="form-control att-class-full">
-                        <option>Class</option>
-                        <option>Level 2 Morning ID:24552</option>
-                        <option disabled>ACSF Reading ID:24552</option>
-                        <option disabled>ACSF Reading ID:24553</option>
-                        <option disabled>ACSF Writing ID:24545</option>
-                        <option disabled>ACSF Writing ID:24524</option>
-                        <option disabled>ACSF Listening ID:24525</option>
-                        <option disabled>ACSF Listening ID:24526</option>
-                      </select>
-                    </div>
-                    <div class="form-group col-md-12">
-                      <select class="form-control ">
-                        <option>Teacher</option>
-                        <option>Luther Kombong</option>
-						<option disabled>Bernie Seebel</option>
-						<option disabled>Medeline Doe</option>
-                      </select>
-                    </div>
-                    <div class="form-group col-md-12">
-                      <div class="btn-group btn-block" data-toggle="buttons">
-                        <label for="" class="btn btn-primary">
-                          <input type="radio" >
-                          Daily roll </label>
-                        <label for="" class="btn btn-primary">
-                          <input type="radio" >
-                          Weekly roll </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="form-group col-md-6">
-                      <label for="datetimepicker4">Start date</label>
-                      <div class="input-group date" id="datetimepicker3" data-options="{ viewMode: 'years', format: 'DD/MM/YYYY' }" data-plugin="datetimepicker">
-                        <input class="form-control" type="text">
-                        <span class="input-group-addon bg-info text-white"> <span class="glyphicon glyphicon-calendar"></span> </span> </div>
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="datetimepicker4">End date</label>
-                      <div class="input-group date" id="datetimepicker4" data-options="{ viewMode: 'years', format: 'DD/MM/YYYY' }" data-plugin="datetimepicker">
-                        <input class="form-control" type="text">
-                        <span class="input-group-addon bg-info text-white"> <span class="glyphicon glyphicon-calendar"></span> </span> </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <form>
-                <div class="panel-footer">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#printModal"><i class="fa fa-print"></i> Export to print</button>
-                </div>
-              </form>
-            </div>
-          </div>
-          <!-- .widget --> 
-        </div>
-      </div>
-      <!-- .row -->
-      
-      <div class="row">
-        <div class="col-md-12">
-          <div class="panel panel-purple">
-            <header class="panel-heading">
-              <h4 class="panel-title">Attendance to complete</h4>
-            </header>
-            <!-- .widget-header -->
-            <hr class="widget-separator">
-            <div class="panel-body">
-              <div class="table-responsive">
-                <table id="default-datatable" class="table table-hover" cellspacing="0" width="100%">
-                  <thead>
-                    <tr>
-                      <th>Date</th>
-                      <th>Attendance</th>
-                      <th>Site</th>
-                      <th>Class</th>
-                      <th>Teacher</th>
-                      <th>Start time</th>
-                      <th>Finish time</th>
-                      <th>Students</th>
-                    </tr>
-                  </thead>
-                  <!--            <tfoot>
-              <tr>
-                <th>Date</th>
-                <th>Attendance</th>
-                <th>Site</th>
-                <th>Class</th>
-                <th>Delivery</th>
-                <th>Teacher</th>
-                <th>Start time</th>
-                <th>Finish time</th>
-                <th>Students</th>
-              </tr>
-                </tfoot>-->
-                  <tbody>
-                    <tr>
-                      <td>12/11/2018</td>
-                      <td><button class="btn btn-danger btnView" type="button">Mark</button></td>
-                      <td>Crown Street </td>
-                      <td>Level 2 Morning ID:24552</td>
-                      <td>Luther Kombong</td>
-                      <td>08:30</td>
-                      <td>12:30</td>
-                      <td>12</td>
-                    </tr>
-                    <tr>
-                      <td>12/11/2018</td>
-                      <td><button class="btn btn-danger btnView" type="button">Mark</button></td>
-                      <td>Crown Street </td>
-                      <td>ACSF Reading ID:24553 </td>
-                      <td>Bernie Seebel</td>
-                      <td>09:00</td>
-                      <td>17:00</td>
-                      <td>25</td>
-                    </tr>
-                    <tr>
-                      <td>12/11/2018</td>
-                      <td><button class="btn btn-danger btnView" type="button">Mark</button></td>
-                      <td>Crown Street </td>
-                      <td>ACSF Writing ID:24545</td>
-                      <td>Medeline Doe</td>
-                      <td>09:00</td>
-                      <td>15:30</td>
-                      <td>17</td>
-                    </tr>
-                    <tr>
-                      <td>13/11/2018</td>
-                      <td><button class="btn btn-danger btnView" type="button">Mark</button></td>
-                      <td>Station St (Level 1)</td>
-                      <td>Social ID:89329</td>
-                      <td>Luther Kombong</td>
-                      <td>14:00</td>
-                      <td>17:30</td>
-                      <td>22</td>
-                    </tr>
-                    <tr>
-                      <td>13/11/2018</td>
-                      <td><button class="btn btn-warning btnView" type="button">Edit</button></td>
-                      <td>Station St (Level 1) </td>
-                      <td>Literacy 2 Part Time ID:89345 </td>
-                      <td>Gwen Shorvak</td>
-                      <td>09:00</td>
-                      <td>12:30</td>
-                      <td>13</td>
-                    </tr>
-                    <tr>
-                      <td>13/11/2018</td>
-                      <td><button class="btn btn-warning btnView" type="button">Edit</button></td>
-                      <td>Station St (Level 1) </td>
-                      <td>ACSF Writing  ID:89234</td>
-                      <td>Barry Stenheimer</td>
-                      <td>09:00</td>
-                      <td>16:00</td>
-                      <td>17</td>
-                    </tr>
-                    <tr>
-                      <td>13/11/2018</td>
-                      <td><button class="btn btn-warning btnView" type="button">Edit</button></td>
-                      <td>Station St (Level 1) </td>
-                      <td>ACSF Reading  ID:89311</td>
-                      <td>Sun Wu</td>
-                      <td>09:00</td>
-                      <td>17:00</td>
-                      <td>27</td>
-                    </tr>
-                    <tr>
-                      <td>13/11/2018</td>
-                      <td><button class="btn btn-warning btnView" type="button">Edit</button></td>
-                      <td>Elizabeth Towers </td>
-                      <td>ACSF Listening  ID:89312</td>
-                      <td>Yuke Kwok</td>
-                      <td>09:00</td>
-                      <td>16:00</td>
-                      <td>23</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <!-- .widget-body --> 
-          </div>
-          <!-- .widget --> 
-        </div>
-      </div>
-      <!-- .row --> 
-      
-      <!-- .wrap --> 
-      <!-- APP FOOTER -->
-      <div class="wrap p-t-0">
-        <footer class="app-footer">
-          <div class="clearfix">
-            <ul class="footer-menu pull-right">
-              <li><a href="#">Disclaimer</a></li>
-              <li><a href="#">Copyright</a></li>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Terms of use</a></li>
-            </ul>
-          </div>
-        </footer>
-      </div>
-      <!-- /#app-footer --> 
-    </section>
-  </div>
-</main>
-	
-	<!-- Print modal -->
-<div class="modal fade" id="printModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Print roll</h4>
-      </div>
-      <div class="modal-body">
-          <a href="#"><img src="../assets/images/icon-pdf_sml.png" alt=""/> Open PDF file for printing</a>
-			
-      </div>
-      <div class="modal-footer">
-        <button type="button" data-dismiss="modal" class="btn btn-default"><i class="fa fa-close"></i> Close </button>
-      </div>
-    </div>
-    <!-- /.modal-content --> 
-  </div>
-  <!-- /.modal-dialog --> 
-</div>
-<!-- /.modal --> 
+    <!--============= start main area -->
+    <!-- APP NAVBAR ==========-->
+    <nav id="app-navbar" class="navbar navbar-inverse navbar-fixed-top purple in">
 
-<!--========== END app main --> 
-<!-- APP CUSTOMIZER --> 
-<!-- #app-customizer --> 
-<!-- SIDE PANEL --> 
-<!-- /#side-panel --> 
-<!-- build:js ../assets/js/core.min.js --> 
-<script src="../libs/bower/jquery/dist/jquery.js"></script> 
-<script src="../libs/bower/jquery-ui/jquery-ui.min.js"></script> 
-<script src="../libs/bower/jQuery-Storage-API/jquery.storageapi.min.js"></script> 
-<script src="../libs/bower/bootstrap-sass/assets/javascripts/bootstrap.js"></script> 
-<script src="../libs/bower/jquery-slimscroll/jquery.slimscroll.js"></script> 
-<script src="../libs/bower/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script> 
-<script src="../libs/bower/bootstrap-timepicker/js/bootstrap-timepicker.js"></script> 
-<script src="../assets/js/library.js"></script> 
-<script src="../assets/js/plugins.js"></script> 
-<script src="../assets/js/app.js"></script> 
-<script src="../libs/bower/moment/moment.js"></script> 
-<script>
-		// Sign in
-		$('.btnView').click(function () {
-			window.location.href = 'Attendance_AMEP.html';
-		});
-	</script>
+        <!-- navbar header -->
+        <div class="navbar-header">
+            <button type="button" id="menubar-toggle-btn" class="navbar-toggle visible-xs-inline-block navbar-toggle-left hamburger hamburger--collapse js-hamburger"> <span class="sr-only">Toggle navigation</span> <span class="hamburger-box"><span class="hamburger-inner"></span></span> </button>
+            <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="zmdi zmdi-hc-lg zmdi-more"></span> </button>
+            <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="zmdi zmdi-hc-lg zmdi-search"></span> </button>
+            <a href="index.html" class="navbar-brand"> <img alt="" class="brand-icon" src="../assets/images/logo-gov_banner1.png" /> <img alt="" class="brand-name dashboard-banner-gov pull-right" src="../assets/images/logo-gov_banner2.png" /> </a>
+        </div>
+        <!-- .navbar-header -->
+
+        <div class="navbar-container container-fluid">
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <ul class="nav navbar-toolbar navbar-toolbar-left navbar-left">
+                    <li class="hidden-float hidden-menubar-top"> <a href="javascript:void(0)" role="button" id="menubar-fold-btn" class="hamburger hamburger--arrowalt is-active js-hamburger"> <span class="hamburger-box"><span class="hamburger-inner"></span></span> </a> </li>
+                    <li> <a href="index.html"><img class="dashboard-banner-logo" alt="" src="../assets/images/logo-skillshub_sml_neg.png" /></a> </li>
+                </ul>
+                <ul class="nav navbar-toolbar navbar-toolbar-right navbar-right">
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-hc-lg zmdi-account"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-account-box"></i>My Profile</a></li>
+                            <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-sign-in"></i>Sign out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- navbar-container -->
+    </nav>
+    <!--========== END app navbar -->
+    <!-- APP ASIDE ==========-->
+    <aside id="menubar" class="menubar in dark">
+        <div class="menubar-scroll">
+            <div class="menubar-scroll-inner">
+                <ul class="app-menu">
+                    <li> <a href="index.html"> <i class="menu-icon zmdi zmdi-view-dashboard zmdi-hc-lg"></i> <span class="menu-text">Dashboard</span> </a> </li>
+                    <li> <a href="#"> <i class="menu-icon zmdi zmdi-accounts-alt zmdi-hc-lg"></i> <span class="menu-text">Clients</span> </a> </li>
+                    <li> <a href="#"> <i class="menu-icon zmdi zmdi-assignment zmdi-hc-lg"></i> <span class="menu-text">Classes</span> </a> </li>
+                    <li> <a href="#"> <i class="menu-icon zmdi zmdi-assignment-check zmdi-hc-lg"></i> <span class="menu-text">Attendance</span> </a> </li>
+                    <li> <a href="#"> <i class="menu-icon zmdi zmdi-notifications zmdi-hc-lg"></i> <span class="menu-text">Notifications</span> </a> </li>
+                    <li> <a href="#"> <i class="menu-icon zmdi zmdi-chart zmdi-hc-lg"></i> <span class="menu-text">Reports</span> </a> </li>
+                    <li> <a href="#"> <i class="menu-icon zmdi zmdi-accounts-list-alt zmdi-hc-lg"></i> <span class="menu-text">Users</span> </a> </li>
+                    <li class="menu-separator">
+                        <hr>
+                    </li>
+                    <li> <a href="#"> <i class="menu-icon zmdi zmdi-archive zmdi-hc-lg"></i> <span class="menu-text">Audit</span> </a> </li>
+                </ul>
+                <!-- .app-menu -->
+            </div>
+            <!-- .menubar-scroll-inner -->
+        </div>
+        <!-- .menubar-scroll -->
+    </aside>
+    <!--========== END app aside -->
+    <!-- navbar search -->
+    <div id="navbar-search" class="navbar-search collapse">
+        <div class="navbar-search-inner">
+            <form action="#">
+                <span class="search-icon"><i class="fa fa-search"></i></span>
+                <input class="search-field" type="search" placeholder="search..." />
+            </form>
+            <button type="button" class="search-close" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false"> <i class="fa fa-close"></i> </button>
+        </div>
+        <div class="navbar-search-backdrop" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false"></div>
+    </div>
+    <!-- .navbar-search -->
+    <!-- APP MAIN ==========-->
+    <main id="app-main" class="app-main">
+        <div class="wrap">
+            <section class="app-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="widget p-md clearfix">
+                            <div class="pull-left">
+                                <h3 class="widget-title">Welcome to Skills HUB</h3>
+                                <!--<small class="text-color">Message to go here</small> -->
+                            </div>
+                        </div>
+                        <!-- .widget -->
+                    </div>
+                    <!--	      <div class="col-md-4 col-sm-4">
+                    <div class="panel panel-primary">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">Register client</h4>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <p>Text to go here</p>
+                                                </div>
+                                            </div>
+                    </div>-->
+                    <div class="col-md-6">
+                        <div class="panel panel-purple">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Attendance</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="widget-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="form-group col-md-12">
+                                                <select class="form-control att-class-full">
+                                                    <option>Site</option>
+                                                    <option>Crown Street</option>
+                                                    <option disabled>Station St (Level 1)</option>
+                                                    <option disabled>Elizabeth Towers</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <select class="form-control att-class-full">
+                                                    <option>Class</option>
+                                                    <option>Level 2 Morning ID:24552</option>
+                                                    <option disabled>ACSF Reading ID:24552</option>
+                                                    <option disabled>ACSF Reading ID:24553</option>
+                                                    <option disabled>ACSF Writing ID:24545</option>
+                                                    <option disabled>ACSF Writing ID:24524</option>
+                                                    <option disabled>ACSF Listening ID:24525</option>
+                                                    <option disabled>ACSF Listening ID:24526</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <div class="input-group date" id="datetimepicker2" data-options="{ viewMode: 'years', format: 'DD/MM/YYYY' }" data-plugin="datetimepicker">
+                                                    <input class="form-control" type="text">
+                                                    <span class="input-group-addon bg-info text-white"> <span class="glyphicon glyphicon-calendar"></span> </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="panel-footer">
+                                    <button type="button" class="btn btn-primary btnView"><i class="fa fa-search"></i> Find class</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .widget -->
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Print Rolls</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="widget-body">
+                                    <form>
+                                        <div class="row">
+                                            <div class="form-group col-md-12">
+                                                <select class="form-control att-class-full">
+                                                    <option>Site</option>
+                                                    <option>Crown Street</option>
+                                                    <option disabled>Station St (Level 1)</option>
+                                                    <option disabled>Elizabeth Towers</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <select class="form-control att-class-full">
+                                                    <option>Class</option>
+                                                    <option>Level 2 Morning ID:24552</option>
+                                                    <option disabled>ACSF Reading ID:24552</option>
+                                                    <option disabled>ACSF Reading ID:24553</option>
+                                                    <option disabled>ACSF Writing ID:24545</option>
+                                                    <option disabled>ACSF Writing ID:24524</option>
+                                                    <option disabled>ACSF Listening ID:24525</option>
+                                                    <option disabled>ACSF Listening ID:24526</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <select class="form-control ">
+                                                    <option>Teacher</option>
+                                                    <option>Luther Kombong</option>
+                                                    <option disabled>Bernie Seebel</option>
+                                                    <option disabled>Medeline Doe</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <div class="btn-group btn-block" data-toggle="buttons">
+                                                    <label for="" class="btn btn-primary">
+                                                        <input type="radio">
+                                                        Daily roll
+                                                    </label>
+                                                    <label for="" class="btn btn-primary">
+                                                        <input type="radio">
+                                                        Weekly roll
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label for="datetimepicker4">Start date</label>
+                                                <div class="input-group date" id="datetimepicker3" data-options="{ viewMode: 'years', format: 'DD/MM/YYYY' }" data-plugin="datetimepicker">
+                                                    <input class="form-control" type="text">
+                                                    <span class="input-group-addon bg-info text-white"> <span class="glyphicon glyphicon-calendar"></span> </span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="datetimepicker4">End date</label>
+                                                <div class="input-group date" id="datetimepicker4" data-options="{ viewMode: 'years', format: 'DD/MM/YYYY' }" data-plugin="datetimepicker">
+                                                    <input class="form-control" type="text">
+                                                    <span class="input-group-addon bg-info text-white"> <span class="glyphicon glyphicon-calendar"></span> </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <form>
+                                    <div class="panel-footer">
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#printModal"><i class="fa fa-print"></i> Export to print</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- .widget -->
+                    </div>
+                </div>
+                <!-- .row -->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-purple">
+                            <header class="panel-heading">
+                                <h4 class="panel-title">Attendance to complete</h4>
+                            </header>
+                            <!-- .widget-header -->
+                            <hr class="widget-separator">
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table id="default-datatable" class="table table-hover" cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Attendance</th>
+                                                <th>Site</th>
+                                                <th>Class</th>
+                                                <th>Teacher</th>
+                                                <th>Start time</th>
+                                                <th>Finish time</th>
+                                                <th>Students</th>
+                                            </tr>
+                                        </thead>
+                                        <!--            <tfoot>
+                                        <tr>
+                                          <th>Date</th>
+                                          <th>Attendance</th>
+                                          <th>Site</th>
+                                          <th>Class</th>
+                                          <th>Delivery</th>
+                                          <th>Teacher</th>
+                                          <th>Start time</th>
+                                          <th>Finish time</th>
+                                          <th>Students</th>
+                                        </tr>
+                                          </tfoot>-->
+                                        <tbody>
+                                            <tr>
+                                                <td>12/11/2018</td>
+                                                <td><button class="btn btn-danger btnView" type="button">Mark</button></td>
+                                                <td>Crown Street </td>
+                                                <td>Level 2 Morning ID:24552</td>
+                                                <td>Luther Kombong</td>
+                                                <td>08:30</td>
+                                                <td>12:30</td>
+                                                <td>12</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12/11/2018</td>
+                                                <td><button class="btn btn-danger btnView" type="button">Mark</button></td>
+                                                <td>Crown Street </td>
+                                                <td>ACSF Reading ID:24553 </td>
+                                                <td>Bernie Seebel</td>
+                                                <td>09:00</td>
+                                                <td>17:00</td>
+                                                <td>25</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12/11/2018</td>
+                                                <td><button class="btn btn-danger btnView" type="button">Mark</button></td>
+                                                <td>Crown Street </td>
+                                                <td>ACSF Writing ID:24545</td>
+                                                <td>Medeline Doe</td>
+                                                <td>09:00</td>
+                                                <td>15:30</td>
+                                                <td>17</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13/11/2018</td>
+                                                <td><button class="btn btn-danger btnView" type="button">Mark</button></td>
+                                                <td>Station St (Level 1)</td>
+                                                <td>Social ID:89329</td>
+                                                <td>Luther Kombong</td>
+                                                <td>14:00</td>
+                                                <td>17:30</td>
+                                                <td>22</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13/11/2018</td>
+                                                <td><button class="btn btn-warning btnView2" type="button">Edit</button></td>
+                                                <td>Station St (Level 1) </td>
+                                                <td>Literacy 2 Part Time ID:89345 </td>
+                                                <td>Gwen Shorvak</td>
+                                                <td>09:00</td>
+                                                <td>12:30</td>
+                                                <td>13</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13/11/2018</td>
+                                                <td><button class="btn btn-warning btnView2" type="button">Edit</button></td>
+                                                <td>Station St (Level 1) </td>
+                                                <td>ACSF Writing  ID:89234</td>
+                                                <td>Barry Stenheimer</td>
+                                                <td>09:00</td>
+                                                <td>16:00</td>
+                                                <td>17</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13/11/2018</td>
+                                                <td><button class="btn btn-warning btnView2" type="button">Edit</button></td>
+                                                <td>Station St (Level 1) </td>
+                                                <td>ACSF Reading  ID:89311</td>
+                                                <td>Sun Wu</td>
+                                                <td>09:00</td>
+                                                <td>17:00</td>
+                                                <td>27</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13/11/2018</td>
+                                                <td><button class="btn btn-warning btnView2" type="button">Edit</button></td>
+                                                <td>Elizabeth Towers </td>
+                                                <td>ACSF Listening  ID:89312</td>
+                                                <td>Yuke Kwok</td>
+                                                <td>09:00</td>
+                                                <td>16:00</td>
+                                                <td>23</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- .widget-body -->
+                        </div>
+                        <!-- .widget -->
+                    </div>
+                </div>
+                <!-- .row -->
+                <!-- .wrap -->
+                <!-- APP FOOTER -->
+                <div class="wrap p-t-0">
+                    <footer class="app-footer">
+                        <div class="clearfix">
+                            <ul class="footer-menu pull-right">
+                                <li><a href="#">Disclaimer</a></li>
+                                <li><a href="#">Copyright</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Terms of use</a></li>
+                            </ul>
+                        </div>
+                    </footer>
+                </div>
+                <!-- /#app-footer -->
+            </section>
+        </div>
+    </main>
+
+    <!-- Print modal -->
+    <div class="modal fade" id="printModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Print roll</h4>
+                </div>
+                <div class="modal-body">
+                    <a href="#"><img src="../assets/images/icon-pdf_sml.png" alt="" /> Open PDF file for printing</a>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-default"><i class="fa fa-close"></i> Close </button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!--========== END app main -->
+    <!-- APP CUSTOMIZER -->
+    <!-- #app-customizer -->
+    <!-- SIDE PANEL -->
+    <!-- /#side-panel -->
+    <!-- build:js ../assets/js/core.min.js -->
+    <script src="../libs/bower/jquery/dist/jquery.js"></script>
+    <script src="../libs/bower/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../libs/bower/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+    <script src="../libs/bower/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+    <script src="../libs/bower/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <script src="../libs/bower/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
+    <script src="../libs/bower/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+    <script src="../assets/js/library.js"></script>
+    <script src="../assets/js/plugins.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../libs/bower/moment/moment.js"></script>
+    <script>
+        // Sign in
+        $('.btnView').click(function () {
+            window.location.href = 'Attendance_AMEP.html';
+        });
+    </script>
+    <script>
+        // Sign in
+        $('.btnView2').click(function () {
+            window.location.href = 'Attendance_AMEP_part.html';
+        });
+    </script>
 </body>
 </html>
