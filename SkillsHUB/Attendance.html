@@ -1,0 +1,442 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="description" content="Admin, Dashboard, Bootstrap" />
+<link rel="shortcut icon" sizes="196x196" href="../assets/images/coatofarms.png">
+<title>Skills HUB - Attendance</title>
+<link rel="stylesheet" href="../libs/bower/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">
+<!-- build:css ../assets/css/app.min.css -->
+<link rel="stylesheet" href="../libs/bower/animate.css/animate.min.css">
+<link rel="stylesheet" href="../libs/bower/fullcalendar/dist/fullcalendar.min.css">
+<link rel="stylesheet" href="../libs/bower/perfect-scrollbar/css/perfect-scrollbar.css">
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" href="../assets/css/core.css">
+<link rel="stylesheet" href="../assets/css/app.css">
+<link rel="stylesheet" href="../assets/css/skillsHUB.css">
+<!-- endbuild -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300">
+<script src="../libs/bower/breakpoints.js/dist/breakpoints.min.js"></script>
+<script>
+	Breakpoints();
+</script>
+</head>
+
+<body class="menubar-left menubar-unfold menubar-dark theme-purple">
+<!--============= start main area --> 
+<!-- APP NAVBAR ==========-->
+<nav id="app-navbar" class="navbar navbar-inverse navbar-fixed-top purple in"> 
+  
+  <!-- navbar header -->
+  <div class="navbar-header">
+    <button type="button" id="menubar-toggle-btn" class="navbar-toggle visible-xs-inline-block navbar-toggle-left hamburger hamburger--collapse js-hamburger"> <span class="sr-only">Toggle navigation</span> <span class="hamburger-box"><span class="hamburger-inner"></span></span> </button>
+    <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="zmdi zmdi-hc-lg zmdi-more"></span> </button>
+    <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="zmdi zmdi-hc-lg zmdi-search"></span> </button>
+    <a href="../index.html" class="navbar-brand"> <img alt="" class="brand-icon" src="../assets/images/logo-gov_banner1.png" /> <img alt="" class="brand-name dashboard-banner-gov pull-right" src="../assets/images/logo-gov_banner2.png" /> </a> </div>
+  <!-- .navbar-header -->
+  
+  <div class="navbar-container container-fluid">
+    <div class="collapse navbar-collapse" id="app-navbar-collapse">
+      <ul class="nav navbar-toolbar navbar-toolbar-left navbar-left">
+        <li class="hidden-float hidden-menubar-top"> <a href="javascript:void(0)" role="button" id="menubar-fold-btn" class="hamburger hamburger--arrowalt is-active js-hamburger"> <span class="hamburger-box"><span class="hamburger-inner"></span></span> </a> </li>
+        <li> <a href="index.html"><img class="dashboard-banner-logo" alt="" src="../assets/images/logo-skillshub_sml_neg.png" /></a> </li>
+      </ul>
+      <ul class="nav navbar-toolbar navbar-toolbar-right navbar-right">
+        <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-hc-lg zmdi-account"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-account-box"></i>My Profile</a></li>
+            <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-sign-in"></i>Sign out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- navbar-container --> 
+</nav>
+<!--========== END app navbar --> 
+<!-- APP ASIDE ==========-->
+<aside id="menubar" class="menubar dark in">
+  <div class="menubar-scroll">
+    <div class="menubar-scroll-inner">
+      <ul class="app-menu">
+        <li> <a href="index.html"> <i class="menu-icon zmdi zmdi-view-dashboard zmdi-hc-lg"></i> <span class="menu-text">Dashboard</span> </a> </li>
+        <li> <a href="#"> <i class="menu-icon zmdi zmdi-accounts-alt zmdi-hc-lg"></i> <span class="menu-text">Clients</span> </a> </li>
+        <li> <a href="#"> <i class="menu-icon zmdi zmdi-assignment zmdi-hc-lg"></i> <span class="menu-text">Classes</span> </a> </li>
+        <li> <a href="attendance.html"> <i class="menu-icon zmdi zmdi-assignment-check zmdi-hc-lg"></i> <span class="menu-text">Attendance</span> </a> </li>
+        <li> <a href="#"> <i class="menu-icon zmdi zmdi-notifications zmdi-hc-lg"></i> <span class="menu-text">Notifications</span> </a> </li>
+        <li> <a href="#"> <i class="menu-icon zmdi zmdi-chart zmdi-hc-lg"></i> <span class="menu-text">Reports</span> </a> </li>
+        <li> <a href="#"> <i class="menu-icon zmdi zmdi-accounts-list-alt zmdi-hc-lg"></i> <span class="menu-text">Users</span> </a> </li>
+        <li class="menu-separator">
+          <hr>
+        </li>
+        <li> <a href="#"> <i class="menu-icon zmdi zmdi-archive zmdi-hc-lg"></i> <span class="menu-text">Audit</span> </a> </li>
+      </ul>
+      <!-- .app-menu --> 
+    </div>
+    <!-- .menubar-scroll-inner --> 
+  </div>
+  <!-- .menubar-scroll --> 
+</aside>
+<!--========== END app aside --> 
+<!-- navbar search -->
+<div id="navbar-search" class="navbar-search collapse">
+  <div class="navbar-search-inner">
+    <form action="#">
+      <span class="search-icon"><i class="fa fa-search"></i></span>
+      <input class="search-field" type="search" placeholder="search..." />
+    </form>
+    <button type="button" class="search-close" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false"> <i class="fa fa-close"></i> </button>
+  </div>
+  <div class="navbar-search-backdrop" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false"></div>
+</div>
+<!-- .navbar-search --> 
+<!-- APP MAIN ==========-->
+<main id="app-main" class="app-main">
+  <div class="wrap">
+    <section class="app-content">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Attendance</li>
+        </ol>
+      </nav>
+      <div class="m-b-xl">
+        <h1 style="font-size: 48px;">Attendance</h1>
+      </div>
+
+		<div class="row">
+
+      <div class="col-md-6">
+<div class="panel panel-purple">
+								<div class="panel-heading">
+									<h4 class="panel-title">Attendance search</h4>
+								</div>
+								<div class="panel-body">
+									      <div class="widget-body">
+        <form>
+          <div class="row">
+            <div class="form-group col-md-12">
+              <select class="form-control att-class-full">
+                <option>Site</option>
+                <option>Site 1</option>
+                <option>Site 2</option>
+                <option>Site 3</option>
+                <option>Site 4</option>
+              </select>
+            </div>
+            <div class="form-group col-md-12">
+              <select class="form-control att-class-full">
+                <option>Class</option>
+                <option>Class 1</option>
+                <option>Class 2</option>
+                <option>Class 3</option>
+                <option>Class 4</option>
+              </select>
+            </div>
+          
+            <div class="form-group col-md-12">
+              <div class="input-group date" id="datetimepicker2" data-plugin="datetimepicker">
+                <input class="form-control" type="text">
+                <span class="input-group-addon bg-info text-white"> <span class="glyphicon glyphicon-calendar"></span> </span> </div>
+            </div>
+			</div>
+        </form>
+      </div>			<div class="panel-footer">
+				<button type="button" class="btn btn-primary btnView"><i class="fa fa-search"></i> Find attendance</button>
+			</div>
+								</div>
+							</div>
+    <!-- .widget --> 
+  </div>
+      <div class="col-md-6">
+<div class="panel panel-primary">
+								<div class="panel-heading">
+									<h4 class="panel-title">Print Rolls</h4>
+								</div>
+								<div class="panel-body">
+																		      <div class="widget-body">
+        <form>
+          <div class="row">
+            <div class="form-group col-md-12">
+              <select class="form-control att-class-full">
+                <option>Site</option>
+                <option>Site 1</option>
+                <option>Site 2</option>
+                <option>Site 3</option>
+                <option>Site 4</option>
+              </select>
+            </div>
+            <div class="form-group col-md-12">
+              <select class="form-control att-class-full">
+                <option>Class</option>
+                <option>Class 1</option>
+                <option>Class 2</option>
+                <option>Class 3</option>
+                <option>Class 4</option>
+              </select>
+            </div>            <div class="form-group col-md-12">
+              <select class="form-control att-class-full">
+                <option>Teacher</option>
+                <option>Teacher 1</option>
+                <option>Teacher 2</option>
+                <option>Teacher 3</option>
+                <option>Teacher 4</option>
+              </select>
+            </div>
+			  <div class="form-group col-md-6">
+          <div class="btn-group btn-block" data-toggle="buttons">
+                      <label for="" class="btn btn-primary active">
+                        <input type="radio" >
+                        Day view </label>
+                      <label for="" class="btn btn-primary">
+                        <input type="radio" >
+                        Week view </label>
+                    </div>
+			  </div>
+            <div class="form-group col-md-6">
+              <div class="input-group date" id="datetimepicker3" data-plugin="datetimepicker">
+				  
+                <input class="form-control" type="text">
+                <span class="input-group-addon bg-info text-white"> <span class="glyphicon glyphicon-calendar"></span> </span> </div>
+            </div>
+			</div>
+        </form>
+      </div>
+												<div class="panel-footer">
+				<button type="button" class="btn btn-primary btnView"><i class="fa fa-print"></i> Export to print</button>
+			</div>
+								</div>
+							</div>
+    <!-- .widget --> 
+  </div>
+    </div>
+<!-- .row -->
+		
+      <div class="row">
+      <div class="col-md-12">
+    <div class="panel panel-purple">
+          <header class="panel-heading">
+        <h4 class="panel-title">Attendance to complete</h4>
+      </header>
+          <!-- .widget-header -->
+          <hr class="widget-separator">
+          <div class="panel-body">
+        <div class="table-responsive">
+              <table id="default-datatable" class="table table-hover" cellspacing="0" width="100%">
+            <thead>
+                  <tr>
+                <th>Date</th>
+                <th>Attendance</th>
+                <th>Site</th>
+                <th>Class</th>
+                <th>Delivery</th>
+                <th>Teacher</th>
+                <th>Start time</th>
+                <th>Finish time</th>
+                <th>Students</th>
+              </tr>
+                </thead>
+            <!--            <tfoot>
+              <tr>
+                <th>Date</th>
+                <th>Attendance</th>
+                <th>Site</th>
+                <th>Class</th>
+                <th>Delivery</th>
+                <th>Teacher</th>
+                <th>Start time</th>
+                <th>Finish time</th>
+                <th>Students</th>
+              </tr>
+                </tfoot>-->
+            <tbody>
+                  <tr>
+                <td>28/10/2018</td>
+                <td><button class="btn btn-danger btn-xs btnView" type="button">Mark</button></td>
+                <td>Site location</td>
+                <td>Class name</td>
+                <td>Delivery method</td>
+                <td>Teacher name</td>
+                <td>9:00am</td>
+                <td>5:00pm</td>
+                <td>19</td>
+              </tr>
+                  <tr>
+                <td>27/10/2018</td>
+                <td><button class="btn btn-danger btn-xs btnView" type="button">Mark</button></td>
+                <td>Site location</td>
+                <td>Class name</td>
+                <td>Delivery method</td>
+                <td>Teacher name</td>
+                <td>9:00am</td>
+                <td>5:00pm</td>
+                <td>25</td>
+              </tr>
+                  <tr>
+                <td>26/10/2018</td>
+                <td><button class="btn btn-danger btn-xs btnView" type="button">Mark</button></td>
+                <td>Site location</td>
+                <td>Class name</td>
+                <td>Delivery method</td>
+                <td>Teacher name</td>
+                <td>9:00am</td>
+                <td>5:00pm</td>
+                <td>21</td>
+              </tr>
+                  <tr>
+                <td>26/10/2018</td>
+                <td><button class="btn btn-danger btn-xs btnView" type="button">Mark</button></td>
+                <td>Site location</td>
+                <td>Class name</td>
+                <td>Delivery method</td>
+                <td>Teacher name</td>
+                <td>9:00am</td>
+                <td>5:00pm</td>
+                <td>22</td>
+              </tr>
+                  <tr>
+                <td>26/10/2018</td>
+                <td><button class="btn btn-warning btn-xs btnView" type="button">Edit</button></td>
+                <td>Site location</td>
+                <td>Class name</td>
+                <td>Delivery method</td>
+                <td>Teacher name</td>
+                <td>9:00am</td>
+                <td>5:00pm</td>
+                <td>13</td>
+              </tr>
+                  <tr>
+                <td>25/10/2018</td>
+                <td><button class="btn btn-warning btn-xs btnView" type="button">Edit</button></td>
+                <td>Site location</td>
+                <td>Class name</td>
+                <td>Delivery method</td>
+                <td>Teacher name</td>
+                <td>9:00am</td>
+                <td>5:00pm</td>
+                <td>17</td>
+              </tr>
+                  <tr>
+                <td>25/10/2018</td>
+                <td><button class="btn btn-warning btn-xs btnView" type="button">Edit</button></td>
+                <td>Site location</td>
+                <td>Class name</td>
+                <td>Delivery method</td>
+                <td>Teacher name</td>
+                <td>9:00am</td>
+                <td>5:00pm</td>
+                <td>27</td>
+              </tr>
+                  <tr>
+                <td>25/10/2018</td>
+                <td><button class="btn btn-warning btn-xs btnView" type="button">Edit</button></td>
+                <td>Site location</td>
+                <td>Class name</td>
+                <td>Delivery method</td>
+                <td>Teacher name</td>
+                <td>9:00am</td>
+                <td>5:00pm</td>
+                <td>30</td>
+              </tr>
+                </tbody>
+          </table>
+            </div>
+      </div>
+          <!-- .widget-body --> 
+        </div>
+    <!-- .widget --> 
+  </div>
+    </div>
+            
+      <!-- Client modal -->
+      <div class="modal fade" id="clientModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Client information</h4>
+            </div>
+            <div class="modal-body">
+              <form action="#">
+                <p>Content to go here</p>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" data-dismiss="modal" class="btn btn-default"><i class="fa fa-close"></i> Close </button>
+            </div>
+          </div>
+          <!-- /.modal-content --> 
+        </div>
+        <!-- /.modal-dialog --> 
+      </div>
+      <!-- /.modal --> 
+      
+      <!-- Add Client modal -->
+      <div class="modal fade" id="addclientModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Add client</h4>
+            </div>
+            <div class="modal-body">
+              <form action="#">
+                <p>Content to go here</p>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" data-dismiss="modal" class="btn btn-default"><i class="fa fa-close"></i> Close </button>
+              <button type="button" data-dismiss="modal" class="btn btn-primary"><i class="fa fa-plus"></i> Add client </button>
+            </div>
+          </div>
+          <!-- /.modal-content --> 
+        </div>
+        <!-- /.modal-dialog --> 
+      </div>
+      <!-- /.modal --> 
+      
+      <!-- APP FOOTER -->
+      <div class="wrap p-t-0">
+        <footer class="app-footer">
+          <div class="clearfix">
+            <ul class="footer-menu pull-right">
+              <li><a href="#">Disclaimer</a></li>
+              <li><a href="#">Copyright</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms of use</a></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!--========== END app main --> 
+<!-- APP CUSTOMIZER --> 
+<!-- #app-customizer --> 
+<!-- SIDE PANEL --> 
+<!-- /#side-panel --> 
+<!-- build:js ../assets/js/core.min.js --> 
+<script src="../libs/bower/jquery/dist/jquery.js"></script> 
+<script src="../libs/bower/jquery-ui/jquery-ui.min.js"></script> 
+<script src="../libs/bower/jQuery-Storage-API/jquery.storageapi.min.js"></script> 
+<script src="../libs/bower/bootstrap-sass/assets/javascripts/bootstrap.js"></script> 
+<script src="../libs/bower/jquery-slimscroll/jquery.slimscroll.js"></script> 
+<script src="../libs/bower/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script> 
+<script src="../libs/bower/PACE/pace.min.js"></script> 
+<script src="../libs/bower/bootstrap-timepicker/js/bootstrap-timepicker.js"></script> 
+<!-- endbuild --> 
+<!-- build:js ../assets/js/app.min.js --> 
+<script src="../assets/js/library.js"></script> 
+<script src="../assets/js/plugins.js"></script> 
+<script src="../assets/js/app.js"></script> 
+<!-- endbuild --> 
+<script src="../libs/bower/moment/moment.js"></script> 
+<script src="../libs/bower/fullcalendar/dist/fullcalendar.min.js"></script> 
+<script src="../assets/js/fullcalendar.js"></script>
+</body>
+</html>

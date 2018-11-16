@@ -1,0 +1,655 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="description" content="Admin, Dashboard, Bootstrap" />
+<link rel="shortcut icon" sizes="196x196" href="../assets/images/coatofarms.png">
+<title>Skills HUB - Attendance</title>
+<link rel="stylesheet" href="../libs/bower/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">
+<!-- build:css ../assets/css/app.min.css -->
+<link rel="stylesheet" href="../libs/bower/animate.css/animate.min.css">
+<link rel="stylesheet" href="../libs/bower/fullcalendar/dist/fullcalendar.min.css">
+<link rel="stylesheet" href="../libs/bower/perfect-scrollbar/css/perfect-scrollbar.css">
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link rel="stylesheet" href="../assets/css/core.css">
+<link rel="stylesheet" href="../assets/css/app.css">
+<link rel="stylesheet" href="../assets/css/skillsHUB.css">
+<!-- endbuild -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300">
+<script src="../libs/bower/breakpoints.js/dist/breakpoints.min.js"></script>
+<script>
+	Breakpoints();
+</script>
+</head>
+
+<body class="menubar-left menubar-unfold menubar-dark theme-purple">
+<!--============= start main area --> 
+<!-- APP NAVBAR ==========-->
+<nav id="app-navbar" class="navbar navbar-inverse navbar-fixed-top purple in"> 
+  
+  <!-- navbar header -->
+      <div class="navbar-header">
+    <button type="button" id="menubar-toggle-btn" class="navbar-toggle visible-xs-inline-block navbar-toggle-left hamburger hamburger--collapse js-hamburger"> <span class="sr-only">Toggle navigation</span> <span class="hamburger-box"><span class="hamburger-inner"></span></span> </button>
+    <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="zmdi zmdi-hc-lg zmdi-more"></span> </button>
+    <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="zmdi zmdi-hc-lg zmdi-search"></span> </button>
+		  
+    <a href="index.html" class="navbar-brand">
+		<img alt="" class="brand-icon" src="../assets/images/logo-gov_banner1.png" /> 
+		<img alt="" class="brand-name dashboard-banner-gov pull-right" src="../assets/images/logo-gov_banner2.png" /> 
+		  </a>
+		</div>
+  <!-- .navbar-header -->
+  
+  <div class="navbar-container container-fluid">
+    <div class="collapse navbar-collapse" id="app-navbar-collapse">
+      <ul class="nav navbar-toolbar navbar-toolbar-left navbar-left">
+        <li class="hidden-float hidden-menubar-top"> <a href="javascript:void(0)" role="button" id="menubar-fold-btn" class="hamburger hamburger--arrowalt is-active js-hamburger"> <span class="hamburger-box"><span class="hamburger-inner"></span></span> </a> </li>
+        <li> <a href="index.html"><img class="dashboard-banner-logo" alt="" src="../assets/images/logo-skillshub_sml_neg.png" /></a> </li>
+      </ul>
+      <ul class="nav navbar-toolbar navbar-toolbar-right navbar-right">
+        <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-hc-lg zmdi-account"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-account-box"></i>My Profile</a></li>
+            <li><a href="javascript:void(0)"><i class="zmdi m-r-md zmdi-hc-lg zmdi-sign-in"></i>Sign out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- navbar-container --> 
+</nav>
+<!--========== END app navbar --> 
+<!-- APP ASIDE ==========-->
+<aside id="menubar" class="menubar in dark">
+  <div class="menubar-scroll">
+    <div class="menubar-scroll-inner">
+      <ul class="app-menu">
+        <li> <a href="index.html"> <i class="menu-icon zmdi zmdi-view-dashboard zmdi-hc-lg"></i> <span class="menu-text">Dashboard</span> </a> </li>
+        <li> <a href="#"> <i class="menu-icon zmdi zmdi-accounts-alt zmdi-hc-lg"></i> <span class="menu-text">Clients</span> </a> </li>
+        <li> <a href="#"> <i class="menu-icon zmdi zmdi-assignment zmdi-hc-lg"></i> <span class="menu-text">Classes</span> </a> </li>
+        <li> <a href="attendance.html"> <i class="menu-icon zmdi zmdi-assignment-check zmdi-hc-lg"></i> <span class="menu-text">Attendance</span> </a> </li>
+        <li> <a href="#"> <i class="menu-icon zmdi zmdi-notifications zmdi-hc-lg"></i> <span class="menu-text">Notifications</span> </a> </li>
+        <li> <a href="#"> <i class="menu-icon zmdi zmdi-chart zmdi-hc-lg"></i> <span class="menu-text">Reports</span> </a> </li>
+        <li> <a href="#"> <i class="menu-icon zmdi zmdi-accounts-list-alt zmdi-hc-lg"></i> <span class="menu-text">Users</span> </a> </li>
+        <li class="menu-separator">
+          <hr>
+        </li>
+        <li> <a href="#"> <i class="menu-icon zmdi zmdi-archive zmdi-hc-lg"></i> <span class="menu-text">Audit</span> </a> </li>
+      </ul>
+      <!-- .app-menu --> 
+    </div>
+    <!-- .menubar-scroll-inner --> 
+  </div>
+  <!-- .menubar-scroll --> 
+</aside>
+<!--========== END app aside --> 
+<!-- navbar search -->
+<div id="navbar-search" class="navbar-search collapse">
+  <div class="navbar-search-inner">
+    <form action="#">
+      <span class="search-icon"><i class="fa fa-search"></i></span>
+      <input class="search-field" type="search" placeholder="search..." />
+    </form>
+    <button type="button" class="search-close" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false"> <i class="fa fa-close"></i> </button>
+  </div>
+  <div class="navbar-search-backdrop" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false"></div>
+</div>
+<!-- .navbar-search --> 
+<!-- APP MAIN ==========-->
+<main id="app-main" class="app-main in">
+  <div class="wrap">
+    <section class="app-content">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+          <li class="breadcrumb-item"><a href="attendance.html">Attendance</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Attendance detail</li>
+        </ol>
+      </nav>
+      <div class="m-b-xl">
+        <h1 style="font-size: 48px;">Attendance detail</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="widget background-grey">
+            <header class="widget-header">
+              <h4 class="widget-title">Classes</h4>
+            </header>
+            <!-- .widget-header -->
+            <div class="widget-body">
+              <form>
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <select class="form-control att-class-full">
+                      <option>Site</option>
+                      <option selected>Crown Street</option>
+                      <option>Station St (Level 1)</option>
+                      <option>Elizabeth Towers</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <select class="form-control att-class-full">
+                      <option>Class</option>
+                      <option selected>Level 2 Morning</option>
+                      <option>ACF2 Reading</option>
+                      <option>ACF1 Reading</option>
+                      <option>ACF2 Writing</option>
+					  <option>ACF1 Writing</option>
+					  <option>ACF1 Listening</option>
+					  <option>ACF2 listening</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-sm-4"> <a class="btn mw-md btn-default btn-block" href="#"><i class="fa fa-chevron-left"></i> Previous session</a> </div>
+                  <div class="form-group col-sm-4">
+                    <div class="input-group date" id="datetimepicker2" data-plugin="datetimepicker" data-options="{ format: 'DD/MM/YYYY', defaultDate: '10/29/2018' }">
+                      <input class="form-control" type="text">
+                      <span class="input-group-addon bg-info text-white"> <span class="glyphicon glyphicon-calendar"></span> </span> </div>
+                  </div>
+                  <div class="form-group col-sm-4"> <a class="btn mw-md btn-default btn-block" href="#">Next session <i class="fa fa-chevron-right"></i></a> </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <header class="panel-heading">
+              <h4 class="widget-title attendance-day-title">Friday 26/10/2018</h4>
+            </header>
+			   
+			  <div class="row classinfo">
+				      <div class="col-md-12"><h4 class="panel-title">CLASS INFORMATION</h4><br>
+                        <table class="table">
+                          <tr>
+                            <th>Teacher</th>
+							  <th>Start</th>
+							  <th>End</th>
+							</tr><tr>
+                            <td>Brengir Flentmo</td>
+							  <td>3/9/2018</td>
+							  <td>30/11/2018</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+			  
+            <div class="panel-group accordion" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" id="heading-1" role="tab"> <a class="accordion-toggle" role="button" aria-expanded="false" aria-controls="collapse-1" href="#collapse-1" data-toggle="collapse" data-parent="#accordion">
+                  <h4 class="panel-title">Class timetable</h4>
+                  <i class="fa acc-switch"></i> </a> </div>
+                <div class="panel-collapse collapse" id="collapse-1" role="tabpanel" aria-expanded="true" aria-labelledby="heading-1">
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Timetable</th>
+                              <th>Mon</th>
+                              <th>Tue</th>
+                              <th>Wed</th>
+                              <th>Thu</th>
+                              <th>Fri</th>
+							  <th>Sat</th>
+							  <th>Sun</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">From</th>
+                              <td>09:00</td>
+                              <td>09:00</td>
+                              <td>09:00</td>
+                              <td>09:00</td>
+                              <td>09:00</td>
+							  <td></td>
+							  <td></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">To</th>
+                              <td>14:15</td>
+                              <td>14:15</td>
+                              <td>14:15</td>
+                              <td>14:15</td>
+                              <td>14:15</td>
+							  <td></td>
+							  <td></td>	
+                            </tr>
+                            <tr>
+                              <th scope="row">Break</th>
+                              <td>00:15</td>
+                              <td>00:15</td>
+                              <td>00:15</td>
+                              <td>00:15</td>
+                              <td>00:15</td>
+							  <td></td>
+							  <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+					  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- .widget-header -->
+            <hr class="widget-separator">
+            <div class="panel-body">
+              <div class="table">
+                <table id="default-datatable" class="table table-hover" cellspacing="0" width="100%">
+                  <thead>
+                    <tr>
+                      <th>Family name</th>
+                      <th>Given name</th>
+                      <th>Client ID</th>
+                      <th>Fund</th>
+                      <th>Status</th>
+                      <th>Attended<br>
+                        <button class="btn btn-primary btn-xs" type="button">Yes to all</button></th>
+                      <th>Started</th>
+                      <th>Finished</th>
+                      <th>Hours</th>
+                      <th>Absence</th>
+                      <th>Notes</th>
+                      <th class="text-right">Actions</th>
+                    </tr>
+                  </thead>
+                  <!--            <tfoot>
+		  <tr>
+			<th>Date</th>
+			<th>Attendance</th>
+			<th>Site</th>
+			<th>Class</th>
+			<th>Delivery</th>
+			<th>Teacher</th>
+			<th>Start time</th>
+			<th>Finish time</th>
+			<th>Students</th>
+		  </tr>
+			</tfoot>-->
+                  <tbody>
+                    <tr>
+                      <td><strong>Frovnesta</strong></td>
+                      <td>Kremborna</td>
+                      <td><a href="#" data-toggle="modal" data-target="#clientModal">234589346</a></td>
+                      <td>AMEP</td>
+                      <td>Active</td>
+                      <td>
+						  <div name="btn-group-1" class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-default btn-yes" id="divtestbtn">Yes</button>
+  <button type="button" class="btn btn-default btn-no" id="divtestbtn2">No</button>
+  <button type="button" class="btn btn-default btn-partial" id="divtestbtn3">Partial</button>
+</div>
+						</td>
+                      <td><div class="input-group bootstrap-timepicker timepicker timepickerfixed" id="divtestdiv1">
+                          <input id="timepicker1" type="text" class="form-control input-small" data-plugin="timepicker" data-options="{ showInputs: false, showMeridian: false }" value="09:00">
+                          <span class="input-group-addon bg-info"><i class="glyphicon glyphicon-time"></i></span> </div></td>
+                      <td><div class="input-group bootstrap-timepicker timepicker timepickerfixed" id="divtestdiv2">
+                          <input id="timepicker2" type="text" class="form-control input-small" data-plugin="timepicker" data-options="{ showInputs: false, showMeridian: false }" value="14:15">
+                          <span class="input-group-addon bg-info"><i class="glyphicon glyphicon-time"></i></span> </div></td>
+                      <td><div id="divtestdiv3">5</div><div id="divtestdiv3b" class="hidden">0</div></td>
+                      <td><div class="form-group" id="divtestdiv4">
+                          <select class="form-control">
+                            <option></option>
+                            <option>Reason 1</option>
+                            <option>Reason 2</option>
+                            <option>Reason 3</option>
+                            <option>Reason 4</option>
+                          </select>
+                        </div></td>
+                      <td><div id="divtestdiv5"><div class="note"><a href="#" data-toggle="modal" data-target="#notesModal">View</a></div></div></td>
+                      <td class="text-right"><div class="form-group">
+                          <select class="form-control">
+                            <option></option>
+                            <option>Action 1</option>
+                            <option>Action 2</option>
+                            <option>Action 3</option>
+                            <option>Action 4</option>
+                          </select>
+                        </div></td>
+                    </tr>
+					                      <tr>
+                      <td><strong>Frovnesta</strong></td>
+                      <td>Kremborna</td>
+                      <td><a href="#" data-toggle="modal" data-target="#clientModal">234589346</a></td>
+                      <td>AMEP</td>
+                      <td>Active</td>
+                      <td>
+						  <div name="btn-group-1" class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-default btn-yes" id="divtestbtn">Yes</button>
+  <button type="button" class="btn btn-default btn-no" id="divtestbtn2">No</button>
+  <button type="button" class="btn btn-default btn-partial" id="divtestbtn3">Partial</button>
+</div>
+						</td>
+                      <td><div class="input-group bootstrap-timepicker timepicker timepickerfixed" id="divtestdiv1">
+                          <input id="timepicker1" type="text" class="form-control input-small" data-plugin="timepicker" data-options="{ showInputs: false, showMeridian: false }" value="09:00">
+                          <span class="input-group-addon bg-info"><i class="glyphicon glyphicon-time"></i></span> </div></td>
+                      <td><div class="input-group bootstrap-timepicker timepicker timepickerfixed" id="divtestdiv2">
+                          <input id="timepicker2" type="text" class="form-control input-small" data-plugin="timepicker" data-options="{ showInputs: false, showMeridian: false }" value="14:15">
+                          <span class="input-group-addon bg-info"><i class="glyphicon glyphicon-time"></i></span> </div></td>
+                      <td><div id="divtestdiv3">5</div><div id="divtestdiv3b" class="hidden">0</div></td>
+                      <td><div class="form-group" id="divtestdiv4">
+                          <select class="form-control">
+                            <option></option>
+                            <option>Reason 1</option>
+                            <option>Reason 2</option>
+                            <option>Reason 3</option>
+                            <option>Reason 4</option>
+                          </select>
+                        </div></td>
+                      <td><div id="divtestdiv5"><div class="note"><a href="#" data-toggle="modal" data-target="#notesModal">View</a></div></div></td>
+                      <td class="text-right"><div class="form-group">
+                          <select class="form-control">
+                            <option></option>
+                            <option>Action 1</option>
+                            <option>Action 2</option>
+                            <option>Action 3</option>
+                            <option>Action 4</option>
+                          </select>
+                        </div></td>
+                    </tr>
+
+
+
+                  </tbody>
+                </table>
+              </div>
+              <div class="panel-footer btn-toolbar">
+                <button class="btn btn-default" data-toggle="modal" data-target="#addclientModal"><i class="fa fa-plus"></i> Add client</button>
+                <button class="btn btn-success pull-right" id="submitbtn" data-toggle="modal" data-target="#submitModal"><i class="fa fa-send"></i> Submit</button>
+                <button class="btn btn-primary pull-right" id="savebtn"><i class="fa fa-save"></i> Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+		
+	<!-- .row -->
+      <div class="row">
+        <div class="=col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">Attendance notifications</h4>
+            </div>
+            <div class="panel-body">
+              <p><span class="text-purple">26/10/2018 5:34PM </span> Kremborna Frovnesta is on leave 29/10/2018 to 1/11/2018</p>
+              <p><span class="text-purple">26/10/2018 9:34AM </span> Patrick martin saved attendance record.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- .row --> 
+      
+      <!-- .row -->
+      <div class="row">
+        <div class="=col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">Attendance change log</h4>
+            </div>
+            <div class="panel-body">
+              <p><span class="text-purple">26/10/2018 5:34PM </span> Patrick martin saved attendance record.</p>
+              <p><span class="text-purple">26/10/2018 9:34AM </span> Patrick martin saved attendance record.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- .row --> 
+      
+      <!-- Client modal -->
+      <div class="modal fade" id="clientModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Client information</h4>
+            </div>
+            <div class="modal-body">
+              <form action="#">
+                <p>Content to go here</p>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" data-dismiss="modal" class="btn btn-default"><i class="fa fa-close"></i> Close </button>
+            </div>
+          </div>
+          <!-- /.modal-content --> 
+        </div>
+        <!-- /.modal-dialog --> 
+      </div>
+      <!-- /.modal --> 
+      
+      <!-- Add Client modal -->
+      <div class="modal fade" id="addclientModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Add client</h4>
+            </div>
+            <div class="modal-body">
+              <form action="#">
+                <p>Content to go here</p>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" data-dismiss="modal" class="btn btn-default"><i class="fa fa-close"></i> Close </button>
+              <button type="button" data-dismiss="modal" class="btn btn-primary"><i class="fa fa-plus"></i> Add client </button>
+            </div>
+          </div>
+          <!-- /.modal-content --> 
+        </div>
+        <!-- /.modal-dialog --> 
+      </div>
+      <!-- /.modal --> 
+		
+		      <!-- Submit modal -->
+      <div class="modal fade" id="submitModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Submit roll</h4>
+            </div>
+            <div class="modal-body">
+              <form action="#">
+                <p>Submit roll for review</p>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" data-dismiss="modal" class="btn btn-default"><i class="fa fa-close"></i> Close </button>
+              <button type="button" data-dismiss="modal" class="btn btn-success"><i class="fa fa-send"></i> Submit</button>
+            </div>
+          </div>
+          <!-- /.modal-content --> 
+        </div>
+        <!-- /.modal-dialog --> 
+      </div>
+      <!-- /.modal --> 
+		
+		      <!-- Notes modal -->
+      <div class="modal fade" id="notesModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Client notes</h4>
+            </div>
+            <div class="modal-body">
+              <form action="#">
+                <textarea rows="4" cols="50">
+Note content to go here.
+</textarea>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" data-dismiss="modal" class="btn btn-default"><i class="fa fa-close"></i> Close </button>
+				<button type="button" data-dismiss="modal" class="btn btn-primary"><i class="fa fa-save"></i> Save </button>
+            </div>
+          </div>
+          <!-- /.modal-content --> 
+        </div>
+        <!-- /.modal-dialog --> 
+      </div>
+      <!-- /.modal -->
+		      
+      <!-- APP FOOTER -->
+      <div class="wrap p-t-0">
+        <footer class="app-footer">
+          <div class="clearfix">
+            <ul class="footer-menu pull-right">
+              <li><a href="#">Disclaimer</a></li>
+              <li><a href="#">Copyright</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms of use</a></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!--========== END app main --> 
+<!-- APP CUSTOMIZER --> 
+<!-- #app-customizer --> 
+<!-- SIDE PANEL --> 
+<!-- /#side-panel --> 
+<!-- build:js ../assets/js/core.min.js --> 
+<script src="../libs/bower/jquery/dist/jquery.js"></script> 
+<script src="../libs/bower/jquery-ui/jquery-ui.min.js"></script> 
+<script src="../libs/bower/jQuery-Storage-API/jquery.storageapi.min.js"></script> 
+<script src="../libs/bower/bootstrap-sass/assets/javascripts/bootstrap.js"></script> 
+<script src="../libs/bower/jquery-slimscroll/jquery.slimscroll.js"></script> 
+<script src="../libs/bower/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script> 
+<script src="../libs/bower/bootstrap-timepicker/js/bootstrap-timepicker.js"></script> 
+<script src="../assets/js/library.js"></script> 
+<script src="../assets/js/plugins.js"></script> 
+<script src="../assets/js/app.js"></script> 
+<script src="../libs/bower/moment/moment.js"></script> 
+<script src="../libs/bootstrap-notify.min.js"></script>
+<script>
+	$('#savebtn').click(function(){
+$.notify({
+	title: 'Saved',
+	message: 'This roll has been saved successfully.'
+},{
+	type: 'success',
+	icon: 'glyphicon glyphicon-check',
+});
+		});
+</script>
+
+<script>
+$(function() {
+    $('#selectnote').change(function(){
+        if ($(this).val() == "2") {
+            $('#warning').show();
+        } else {
+            $('#warning').hide();
+        }
+    });
+});	
+</script>
+<!--
+<script>
+
+$('#divtestbtn').click(function(){
+	$("divtestbtn").addClass("active");
+	$('#divtestbtn').addClass("btn-success");
+	$('#divtestbtn2').removeClass("btn-danger");
+	$('#divtestbtn3').removeClass("btn-warning");
+	$(this).attr("selected","selected");
+    $('#divtestdiv1').hide();
+	$('#divtestdiv2').hide();
+	$('#divtestdiv3').show();
+	$('#divtestdiv4').hide();
+	$('#divtestdiv5').show();
+});
+	
+$('#divtestbtn2').click(function(){
+	$("divtestbtn2").addClass("active");
+	$('#divtestbtn').removeClass("btn-success");
+	$('#divtestbtn2').addClass("btn-danger");
+	$('#divtestbtn3').removeClass("btn-warning");
+	$(this).attr("selected","selected");
+    $('#divtestdiv1').hide();
+	$('#divtestdiv2').hide();
+	$('#divtestdiv3').show();
+	$('#divtestdiv4').show();
+	$('#divtestdiv5').show();
+});
+	
+$('#divtestbtn3').click(function(){
+	$("divtestbtn3").addClass("active");
+	$('#divtestbtn').removeClass("btn-success");
+	$('#divtestbtn2').removeClass("btn-danger");
+	$('#divtestbtn3').addClass("btn-warning");
+	$(this).attr("selected","selected");
+    $('#divtestdiv1').show();
+	$('#divtestdiv2').show();
+	$('#divtestdiv3').hide();
+	$('#divtestdiv3b').show();
+	$('#divtestdiv4').show();
+	$('#divtestdiv5').show();
+});
+	</script>-->
+	
+<script>
+	$(".btn-yes").click(function () {
+		$(this).addClass("active").addClass("btn-success").attr("selected", "selected");
+
+		var $parent = $(this).parent();
+		$parent.children(".btn-no").removeClass("btn-danger").attr("seleceted", false).removeClass("active");
+		$parent.children(".btn-partial").removeClass("btn-warning").attr("selected", false).removeClass("active");
+
+		var $parentRow = $parent.parent().parent();
+		$parentRow.find("#divtestdiv1").hide();
+		$parentRow.find("#divtestdiv2").hide();
+		$parentRow.find("#divtestdiv3").show();
+		$parentRow.find("#divtestdiv4").hide();
+		$parentRow.find("#divtestdiv5").show();
+	});
+	$(".btn-no").click(function () {
+		$(this).addClass("active").addClass("btn-danger").attr("selected", "selected");
+
+		var $parent = $(this).parent();
+		$parent.children(".btn-yes").removeClass("btn-success").attr("selected", false).removeClass("active");
+		$parent.children(".btn-partial").removeClass("btn-warning").attr("selected", false).removeClass("active");
+
+		var $parentRow = $parent.parent().parent();
+		$parentRow.find("#divtestdiv1").hide();
+		$parentRow.find("#divtestdiv2").hide();
+		$parentRow.find("#divtestdiv3").show();
+		$parentRow.find("#divtestdiv4").show();
+		$parentRow.find("#divtestdiv5").show();		
+	});
+
+	$(".btn-partial").click(function () {
+		$(this).addClass("active").addClass("btn-warning").attr("selected", "selected");
+
+		var $parent = $(this).parent();
+		$parent.children(".btn-yes").removeClass("btn-success").attr("selected", false).removeClass("active");
+		$parent.children(".btn-no").removeClass("btn-danger").attr("selected", false).removeClass("active");
+
+		var $parentRow = $parent.parent().parent();
+		$parentRow.find("#divtestdiv1").show();
+		$parentRow.find("#divtestdiv2").show();
+		$parentRow.find("#divtestdiv3").hide();
+		$parentRow.find("#divtestdiv3b").show();
+		$parentRow.find("#divtestdiv4").show();
+		$parentRow.find("#divtestdiv5").show();
+	}); 
+</script>	
+</body>
+</html>
