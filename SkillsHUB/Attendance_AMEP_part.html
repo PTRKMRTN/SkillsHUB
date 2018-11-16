@@ -340,7 +340,7 @@
                           <span class="input-group-addon bg-info"><i class="glyphicon glyphicon-time"></i></span> </div></td>
                       <td><div id="divtestdiv3" style="display: none;">3.75</div>
                         <div id="divtestdiv3b" style="display: none;">0</div>
-                        <div id="divtestdiv3c" style="display: none;">3.75</div></td>
+                        <div id="divtestdiv3c" style="display: none;">3</div></td>
                       <td><div class="form-group" id="divtestdiv4" style="display: none;">
                           <select class="form-control att-reason">
                             <option></option>
@@ -1190,33 +1190,22 @@ $('#divtestbtn3').click(function(){
              var minutes1 = $timePicker1.data("timepicker").minute;
              var minutes2 = $timePicker2.data("timepicker").minute;
 
-             var duration = 0;
-             if (hours2 >= hours1 || (hours2 == hours1 && minutes2 >= minutes1)) {
-                    duration = hours2 - hours1 + ((minutes2 - minutes1) / 60)
-             }
-             $durationDiv.text(duration);
+        var duration = 0;
+        if (hours2 > hours1 || (hours2 == hours1 && minutes2 >= minutes1)) {
+            duration = hours2 - hours1 + ((minutes2 - minutes1) / 60);
+            duration = duration - 0.25;
+
+            if (duration < 0) {
+                duration = 0;
+            }
+        }
+        $durationDiv.text(duration);
+
        });
 
 	</script>
 <script>
-             var defaults = [
-                    {
-                           familyName: "ABIDIN",                                              //Identify the row
-                           attended: "Partial",                                        //Use Yes, No or Partial
-                           started: "18:30",                                                  //Applies only when attended is Partial
-                           finished: "20:00",                                                 //Applies only when attended is Partial
-                           absence: "Approved - family commitments"        //Applies only when attended is No or Partial
-                    },
-                    {                                                                                     //Another row to target
-                           familyName: "MASSON",
-                           attended: "Yes"
-                    },
-                    {                                                                                     //Another row to target
-                           familyName: "RAVEENDRAN",
-                           attended: "No",
-                           absence: "Approved - cultural or religious"
-                 }
-                                        {
+             var defaults = [ {
                      familyName: "ABIDIN",                                              //Identify the row
                      attended: "Partial",                                        //Use Yes, No or Partial
                      started: "10:45",                                                  //Applies only when attended is Partial
