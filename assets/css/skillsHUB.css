@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 
 /* BRANDING */
@@ -93,4 +93,65 @@
 }
 .givencolumn:first-letter {
 	text-transform:capitalize;
+}
+
+/* ATTENDANCE CARD CONCEPT*/
+
+.cardpad {
+	padding: 15px;
+}
+
+.cardname {
+	font-size: 26px;
+}
+
+#divtestdiv3 {
+	background-color: #0b8b4b;
+	color: #fff;
+	padding: 8px 16px;
+	text-align: center;
+	line-height: 1.4285;
+	border-radius: 4px;
+	min-width: 60px;
+}
+#divtestdiv3b {
+	background-color: #ff1e1e;
+	color: #fff;
+	padding: 8px 16px;
+	text-align: center;
+	line-height: 1.4285;
+	border-radius: 4px;
+		min-width: 60px;
+}
+#divtestdiv3c {
+	background-color: #f7b516;
+	color: #fff;
+	padding: 8px 16px;
+	text-align: center;
+	line-height: 1.4285;
+	border-radius: 4px;
+		min-width: 60px;
+}
+#divtestdiv3c2, #cardbreak3, #cardvt3, #cardbreak4, #carvt4 {
+	padding: 9px 0px;
+}
+
+/* General style overrides to integrate */
+
+/*th {
+	color: #522761;
+}
+
+.panel-heading.attendance {
+	background-color: #522761;
+	color: #fff;
+}
+
+.widget-title.attendance-day-title {
+		color: #fff;
+}*/
+.vcenter {
+	display: inline-block;
+    vertical-align: middle;
+    float: none;
 }
